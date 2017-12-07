@@ -3,8 +3,7 @@ package it.skimple.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class Tag {
-	private Long id;
-	
+public class Tag extends BaseEntity {
+
 	private String nome;
 }

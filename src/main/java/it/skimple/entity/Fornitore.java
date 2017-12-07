@@ -3,8 +3,7 @@ package it.skimple.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class Fornitore {
-	private Long id;
+public class Fornitore extends BaseEntity {
 	
 	private String nome;
 }

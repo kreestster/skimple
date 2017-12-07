@@ -12,11 +12,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Prodotto {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+public class Prodotto extends BaseEntity{
 	
 	@Column(name = "nome_prodotto")
 	@NotNull

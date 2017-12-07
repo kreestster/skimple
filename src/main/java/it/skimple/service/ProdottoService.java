@@ -7,12 +7,24 @@ import it.skimple.entity.Prodotto;
 import it.skimple.repository.ProdottoRepository;
 
 @Service
-public class ProdottoService {
+public class ProdottoService implements IService<Prodotto> {
 	
 	@Autowired
 	ProdottoRepository repo;
 	
-	public Prodotto getProdotto(long idProdotto){
+	@Override
+	public Prodotto get(long idProdotto){
 		return repo.findOne(idProdotto);
+	}
+	
+	@Override
+	public Prodotto save(Prodotto prodotto) {
+		return repo.save(prodotto);
+	}
+
+	@Override
+	public Prodotto get(Prodotto t) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

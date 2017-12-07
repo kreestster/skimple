@@ -3,7 +3,6 @@ package it.skimple.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class Categoria {
-	private Long id;
+public class Categoria extends BaseEntity {
 	private String descrizione;
 }
