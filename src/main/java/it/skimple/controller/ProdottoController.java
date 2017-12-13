@@ -1,5 +1,7 @@
 package it.skimple.controller;
 
+import java.util.Collection;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +29,12 @@ public class ProdottoController {
 	public Prodotto saveProdotto(@Valid @RequestBody Prodotto prodotto) {
 		return service.save(prodotto);
 	}
+	
+	@GetMapping("/prodotto/findByName/{name}")
+	public Collection<Prodotto> findByNomeProdotto(@PathVariable("name") String nomeProdotto){
+		return service.findByNomeProdotto(nomeProdotto);
+	}
+	
+	
 	
 }

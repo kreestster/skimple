@@ -4,7 +4,7 @@ import it.skimple.entity.BaseEntity;
 
 public interface IService<T extends BaseEntity> {
 
-	public T get(T t);
+//	public T get(T t);
 
 	public T get(long id);
 	

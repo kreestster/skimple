@@ -1,5 +1,7 @@
 package it.skimple.service;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,10 +23,9 @@ public class ProdottoService implements IService<Prodotto> {
 	public Prodotto save(Prodotto prodotto) {
 		return repo.save(prodotto);
 	}
-
-	@Override
-	public Prodotto get(Prodotto t) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public Collection<Prodotto> findByNomeProdotto(String nomeProdotto) {
+		return repo.findByNomeProdotto(nomeProdotto);
 	}
+
 }

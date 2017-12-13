@@ -7,4 +7,13 @@ import javax.persistence.Entity;
 public class Multimedia extends BaseEntity {
 	@Column(name="uri")
 	private String uri;
+
+	public String getUri() {
+		return uri;
+	}
+
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	
 }
